@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import '@/styles/globals.css';
+import 'ProjectTransport\public_transport_tracking\styles\globals.css';
 
 
 const geistSans = Geist({

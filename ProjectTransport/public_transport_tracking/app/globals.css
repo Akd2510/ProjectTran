@@ -1,15 +1,13 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+/* Define custom CSS variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', sans-serif; /* Replace with your Tailwind font */
+  --font-mono: 'Fira Code', monospace; /* Replace with your Tailwind font */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +17,8 @@
   }
 }
 
+/* Apply global styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[var(--background)] text-[var(--foreground)];
+  font-family: var(--font-sans);
 }
